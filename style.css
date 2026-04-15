@@ -9,7 +9,7 @@ body {
   color: #222;
 }
 
-/* ── Header ─────────────────────────────────────────── */
+
 
 header {
   border-bottom: 1px solid #ccc;
@@ -22,7 +22,7 @@ h1 {
   color: #1a1a1a;
 }
 
-/* ── Layout ─────────────────────────────────────────── */
+
 
 main {
   display: flex;
@@ -31,7 +31,7 @@ main {
   align-items: flex-start;
 }
 
-/* ── Pet display ─────────────────────────────────────── */
+
 
 .pet-image-container {
   position: relative;
@@ -39,7 +39,7 @@ main {
   min-width: 100px;
 }
 
-/* Big emoji used as the pet "image" */
+
 .pet-emoji {
   font-size: 80px;
   line-height: 1;
@@ -48,7 +48,7 @@ main {
   display: block;
 }
 
-/* Speech bubble — hidden by default, shown via jQuery .queue() */
+
 .speech-bubble {
   display: none;
   position: absolute;
@@ -66,7 +66,7 @@ main {
   z-index: 10;
 }
 
-/* Arrow pointing left from the bubble toward the pet */
+
 .speech-bubble::before {
   content: '';
   position: absolute;
@@ -87,8 +87,6 @@ main {
   border-color: transparent #fff transparent transparent;
 }
 
-/* ── Dashboard ───────────────────────────────────────── */
-
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -103,8 +101,6 @@ main {
 .dashboard div {
   font-size: 14px;
 }
-
-/* ── Stat bars ───────────────────────────────────────── */
 
 .stat-row {
   display: flex;
@@ -129,7 +125,6 @@ main {
 .bar-weight    { background-color: #378ADD; }
 .bar-energy    { background-color: #BA7517; }
 
-/* ── Buttons ─────────────────────────────────────────── */
 
 .button-container {
   display: flex;
@@ -153,17 +148,10 @@ main {
   transform: scale(0.97);
 }
 
-/* ── Hover glow classes (applied by jQuery .hover()) ────
-   Each button type gets its own glow color so the player
-   gets a visual cue about which action they're about to take.
-   These classes are added/removed dynamically in script.js.  */
-
 .glow-green  { box-shadow: 0 0 10px 3px rgba(29, 158, 117, 0.6) !important; }
 .glow-blue   { box-shadow: 0 0 10px 3px rgba(55, 138, 221, 0.6) !important; }
 .glow-orange { box-shadow: 0 0 10px 3px rgba(186, 117, 23,  0.6) !important; }
 .glow-purple { box-shadow: 0 0 10px 3px rgba(127, 119, 221, 0.6) !important; }
-
-/* ── Mood text ───────────────────────────────────────── */
 
 .mood-text {
   font-size: 13px;
