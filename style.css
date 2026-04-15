@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+  background-color: #f9f7f4;
+  color: #222;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+/* ── Layout ─────────────────────────────────────────── */
+
+main {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* ── Pet display ─────────────────────────────────────── */
+
+.pet-image-container {
+  position: relative;
+  padding: 10px;
+  min-width: 100px;
+}
+
+/* Big emoji used as the pet "image" */
+.pet-emoji {
+  font-size: 80px;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  display: block;
+}
+
+/* Speech bubble — hidden by default, shown via jQuery .queue() */
+.speech-bubble {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 95px;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #333;
+  max-width: 200px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+/* Arrow pointing left from the bubble toward the pet */
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 14px;
+  border-width: 6px 9px 6px 0;
+  border-style: solid;
+  border-color: transparent #bbb transparent transparent;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 15px;
+  border-width: 5px 8px 5px 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* ── Dashboard ───────────────────────────────────────── */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  min-width: 260px;
+}
+
+.dashboard div {
+  font-size: 14px;
+}
+
+/* ── Stat bars ───────────────────────────────────────── */
+
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar-bg {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.bar-happiness { background-color: #1D9E75; }
+.bar-weight    { background-color: #378ADD; }
+.bar-energy    { background-color: #BA7517; }
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.button-container button {
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: #1e2835;
+  color: #fafafa;
+  border: 1px solid #404853;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.button-container button:active {
+  transform: scale(0.97);
+}
+
+/* ── Hover glow classes (applied by jQuery .hover()) ────
+   Each button type gets its own glow color so the player
+   gets a visual cue about which action they're about to take.
+   These classes are added/removed dynamically in script.js.  */
+
+.glow-green  { box-shadow: 0 0 10px 3px rgba(29, 158, 117, 0.6) !important; }
+.glow-blue   { box-shadow: 0 0 10px 3px rgba(55, 138, 221, 0.6) !important; }
+.glow-orange { box-shadow: 0 0 10px 3px rgba(186, 117, 23,  0.6) !important; }
+.glow-purple { box-shadow: 0 0 10px 3px rgba(127, 119, 221, 0.6) !important; }
+
+/* ── Mood text ───────────────────────────────────────── */
+
+.mood-text {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  min-height: 20px;
+}

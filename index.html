@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Giga Pet</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Your Giga Pet 🐾</h1>
+</header>
+
+<main>
+  <!-- Pet display -->
+  <section class="pet-image-container">
+    <div class="pet-emoji" id="petEmoji">🐶</div>
+    <div class="speech-bubble" id="bubble"></div>
+  </section>
+
+  <!-- Stats Dashboard and Buttons -->
+  <section class="dashboard">
+    <div>Name: <strong><span class="name"></span></strong></div>
+
+    <div class="stat-row">
+      Happiness: <strong><span class="happiness"></span>/100</strong>
+      <div class="bar-bg"><div class="bar bar-happiness" id="happinessBar"></div></div>
+    </div>
+
+    <div class="stat-row">
+      Weight: <strong><span class="weight"></span> lbs</strong>
+      <div class="bar-bg"><div class="bar bar-weight" id="weightBar"></div></div>
+    </div>
+
+    <!-- New stat: Energy -->
+    <div class="stat-row">
+      Energy: <strong><span class="energy"></span>/100</strong>
+      <div class="bar-bg"><div class="bar bar-energy" id="energyBar"></div></div>
+    </div>
+
+    <div class="button-container">
+      <button class="treat-button">🦴 Treat</button>
+      <button class="play-button">🎾 Play</button>
+      <button class="exercise-button">🏃 Exercise</button>
+      <!-- New action button: Nap -->
+      <button class="nap-button">💤 Nap</button>
+    </div>
+
+    <!-- Mood messages -->
+    <div class="mood-text" id="moodText"></div>
+  </section>
+</main>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
