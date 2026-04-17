@@ -54,6 +54,14 @@ $(function () {
 
     $b.css("display", "block");
 
+
+    // .queue() adds a function to jQuery's internal queue
+    // The first line adds this function to the pet's speech to do list.
+    // The next parameter is a ready callback meaning the task is done.
+    // Inside the function setTimeout() fires after 1800ms and hides the bubble with display as none.
+    // next() is called to mark as complete.
+    // The queue doesn't run automatically (it normally waits for animations),
+    // so dequeue() is called immediately to trigger it manually.
     $b.queue(function (next) {
       bubbleTimer = setTimeout(function () {
         $b.css("display", "none");
@@ -65,7 +73,12 @@ $(function () {
     $b.dequeue();
   }
 
-  // Button hover glow
+
+  // .hover() is a jQuery shorthand that binds two functions to an element.
+  // The first function runs on mouseenter, the second runs on mouseleave.
+  // Here it adds a glow class when the cursor enters the button.
+  // When the cursor leaves, the glow class is removed.
+  // This creates the colored glow effect on each button hover.
   $(".treat-button").hover(
       function () { $(this).addClass("glow-green");  },
       function () { $(this).removeClass("glow-green"); }
