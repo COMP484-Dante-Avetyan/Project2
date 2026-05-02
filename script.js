@@ -7,7 +7,7 @@ $(function () {
 
   // Pet data object
   var pet_info = {
-    name: "Biscuit",
+    name: "Ye",
     weight: 20,
     happiness: 50,
     energy: 60
@@ -121,12 +121,12 @@ $(function () {
 
     // Update mood hint
     var moodMessages = {
-      happy:       "Biscuit is thriving! ",
-      sad:         "Biscuit looks down. Try playing.",
-      tired:       "Biscuit is exhausted. Let him nap.",
-      fat:         "Biscuit might need some exercise.",
-      underweight: "Biscuit might need some food.",
-      normal:      "Biscuit is doing okay."
+      happy:       "Ye is thriving! ",
+      sad:         "Ye looks down. Try playing.",
+      tired:       "Ye is exhausted. Let him nap.",
+      fat:         "Ye might need some exercise.",
+      underweight: "Ye might need some food.",
+      normal:      "Ye is doing okay."
     };
     $("#moodText").text(moodMessages[getMood()] || "");
   }

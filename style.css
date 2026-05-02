@@ -40,8 +40,9 @@ main {
 }
 
 
-.pet-emoji {
-  font-size: 80px;
+.pet-image {
+  position: relative;
+  width: 80%;
   line-height: 1;
   cursor: default;
   user-select: none;
@@ -52,8 +53,8 @@ main {
 .speech-bubble {
   display: none;
   position: absolute;
-  top: -10px;
-  left: 95px;
+  top: 120px;
+  left: 250px;
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 12px;
